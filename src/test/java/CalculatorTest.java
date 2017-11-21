@@ -237,5 +237,117 @@ public class CalculatorTest {
 			
 		}
 	}
+	@Test
+	public void testMultiplySmallSizedPositiveNumbers() {
+		double firstNumber = 0;
+		double secondNumber = 0;
+		double result = 0;
+		
+		for(int i = 0;i<200;i++) {
+			firstNumber = Double.valueOf(df.format(random.nextDouble()*10));
+			secondNumber = Double.valueOf(df.format(random.nextDouble()*10));
+			result = firstNumber * secondNumber;
+			
+			LOG.info("Testing the method with: "+ firstNumber +" and " + secondNumber);
+			assertEquals(Math.round(calculator.multiply(firstNumber, secondNumber)), Math.round(result),1);
+			
+		}
+	}
+	@Test
+	public void testMultiplyMediumSizedPositiveNumbers() {
+		double firstNumber = 0;
+		double secondNumber = 0;
+		double result = 0;
+		
+		for(int i = 0;i<200;i++) {
+			firstNumber = Double.valueOf(df.format(random.nextDouble()*100));
+			secondNumber = Double.valueOf(df.format(random.nextDouble()*100));
+			result = firstNumber * secondNumber;
+			
+			LOG.info("Testing the method with: "+ firstNumber +" and " + secondNumber);
+			assertEquals(Math.round(calculator.multiply(firstNumber, secondNumber)), Math.round(result),1);
+			
+		}
+	}
+	@Test
+	public void testMultiplyLargeSizedPositiveNumbers() {
+		double firstNumber = 0;
+		double secondNumber = 0;
+		double result = 0;
+		
+		for(int i = 0;i<200;i++) {
+			firstNumber = Double.valueOf(df.format(random.nextDouble()*1000));
+			secondNumber = Double.valueOf(df.format(random.nextDouble()*1000));
+			result = firstNumber * secondNumber;
+			
+			LOG.info("Testing the method with: "+ firstNumber +" and " + secondNumber);
+			assertEquals(Math.round(calculator.multiply(firstNumber, secondNumber)), Math.round(result),1);
+			
+		}
+	}
+	@Test
+	public void testMultiplyZeros() {
+		double firstNumber = 0;
+		double secondNumber = 0;
+		double result = 0;
+		
+		for(int i = 0;i<200;i++) {
+			firstNumber = Double.valueOf(0);
+			secondNumber = Double.valueOf(0);
+			result = firstNumber * secondNumber;
+			
+			LOG.info("Testing the method with: "+ firstNumber +" and " + secondNumber);
+			assertEquals(Math.round(calculator.multiply(firstNumber, secondNumber)), Math.round(result),1);
+			
+		}
+	}
+	@Test
+	public void testMultiplySmallSizedNegativeNumbers() {
+		double firstNumber = 0;
+		double secondNumber = 0;
+		double result = 0;
+		
+		for(int i = 0;i<200;i++) {
+			firstNumber = Double.valueOf(df.format(random.nextDouble()*(-10)));
+			secondNumber = Double.valueOf(df.format(random.nextDouble()*(-10)));
+			result = firstNumber * secondNumber;
+			
+			LOG.info("Testing the method with: "+ firstNumber +" and " + secondNumber);
+			assertEquals(Math.round(calculator.multiply(firstNumber, secondNumber)), Math.round(result),1);
+			
+		}
+	}
+	@Test
+	public void testMultiplyMediumSizedNegativeNumbers() {
+		double firstNumber = 0;
+		double secondNumber = 0;
+		double result = 0;
+		
+		for(int i = 0;i<200;i++) {
+			firstNumber = Double.valueOf(df.format(random.nextDouble()*-(100)));
+			secondNumber = Double.valueOf(df.format(random.nextDouble()*-(100)));
+			result = firstNumber * secondNumber;
+			
+			LOG.info("Testing the method with: "+ firstNumber +" and " + secondNumber);
+			assertEquals(Math.round(calculator.multiply(firstNumber, secondNumber)), Math.round(result),1);
+			
+		}
+	}
+	@Test
+	public void testMultiplyLargeSizedNegativeNumbers() {
+		double firstNumber = 0;
+		double secondNumber = 0;
+		double result = 0;
+		
+		for(int i = 0;i<200;i++) {
+			firstNumber = Double.valueOf(df.format(random.nextDouble()*(-1000)));
+			secondNumber = Double.valueOf(df.format(random.nextDouble()*(-1000)));
+			result = firstNumber * secondNumber;
+			
+			LOG.info("Testing the method with: "+ firstNumber +" and " + secondNumber);
+			assertEquals(Math.round(calculator.multiply(firstNumber, secondNumber)), Math.round(result),1);
+			
+		}
+	}
 }
 
