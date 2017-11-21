@@ -53,11 +53,11 @@ public class Calculator {
 	 * @return: the result of the division.
 	 * */
 	public double divide(double firstNumber, double secondNumber){
-		if (firstNumber != 0 || secondNumber !=0) {
-			return firstNumber / secondNumber;
-			}
+		if (secondNumber == 0) {
 			System.out.println("You can't devide with zero");
 			return -0.1234567890;
+			}
+		return firstNumber / secondNumber;
 	}
 	
 
